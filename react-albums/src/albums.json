@@ -1,0 +1,67 @@
+{
+  "albums": [
+    {
+      "name": "album 1",
+      "id": 1,
+      "photos": [
+        {
+          "id": "1",
+          "name": "cat photo1b",
+          "url": "https://octodex.github.com/images/boxertocat_octodex.jpg"
+        },
+        {
+          "id": "2",
+          "name": "cat photo2b",
+          "url": "https://octodex.github.com/images/scubatocat.png"
+        },
+        {
+          "id": "3",
+          "name": "cat photo3c",
+          "url": "https://octodex.github.com/images/tentocats.jpg"
+        }
+      ]
+    },
+    {
+      "name": "album 2",
+      "photos": [
+        {
+          "id": "1",
+          "name": "cat photo1ba",
+          "url": "https://octodex.github.com/images/catstello.png"
+        },
+        {
+          "id": "2",
+          "name": "cat photo2a",
+          "url": "https://octodex.github.com/images/mcefeeline.jpg"
+        },
+        {
+          "id": "3",
+          "name": "cat photo3a",
+          "url": "https://octodex.github.com/images/inflatocat.png"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "album 2",
+      "photos": [
+        {
+          "id": "1",
+          "name": "cat photo1d",
+          "url": "https://octodex.github.com/images/gracehoppertocat.jpg"
+        },
+        {
+          "id": "2",
+          "name": "cat photo2d",
+          "url": "https://octodex.github.com/images/privateinvestocat.jpg"
+        },
+        {
+          "id": "3",
+          "name": "cat photo3d",
+          "url": "https://octodex.github.com/images/daftpunktocat-thomas.gif"
+        }
+      ],
+      "id": 3
+    }
+  ]
+}
