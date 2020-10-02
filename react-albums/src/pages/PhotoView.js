@@ -33,8 +33,13 @@ function PhotoView() {
   //location in object needs to be resolved above and stored in states as needed
   return (
     <div>
-      <h1>PHOTO VIEW</h1>
-      <img key={photoData.id} src={currentPhoto}></img>
+      <h1 className="header">PHOTO VIEW</h1>
+
+      <div className="container-photo-view">
+        <i class="fas fa-arrow-left arrow"></i>
+        <img key={photoData.id} src={currentPhoto} className="img-large"></img>
+        <i class="fas fa-arrow-right arrow"></i>
+      </div>
     </div>
   )
 }

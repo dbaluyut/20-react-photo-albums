@@ -35,7 +35,7 @@ function AlbumView() {
         <div className="container1">
           {masterData.map((item) => {
             return (
-              <Link to="/">
+              <Link to="/album/">
                 <li className="album-name-aside">{item.name}</li>
               </Link>
             )
