@@ -15,6 +15,7 @@ function PhotoView() {
 
   const [albumData, setAlbumData] = useState({ photos: [] })
   const [currentPhoto, setCurrentPhoto] = useState([])
+  const [photoData, setPhotoData] = useState([])
 
   useEffect(() => {
     axios.get(`http://localhost:3000/albums/${id}`).then((r) => {
@@ -22,10 +23,10 @@ function PhotoView() {
       albumData.photos.filter((photo) => {
         if (photo.id == id) {
           setCurrentPhoto(photo.url)
-          return photo
+          setPhotoData(photo)
         }
       })
-      console.log(albumData.photos)
+      console.log(albumData.id)
       // setCurrentPhoto(albumData.photos.id)
     })
   }, [])
@@ -33,7 +34,7 @@ function PhotoView() {
   return (
     <div>
       <h1>PHOTO VIEW</h1>
-      <img src={currentPhoto}></img>
+      <img key={photoData.id} src={currentPhoto}></img>
     </div>
   )
 }

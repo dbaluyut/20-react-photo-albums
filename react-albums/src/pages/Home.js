@@ -12,14 +12,18 @@ function Home() {
   }, [])
   return (
     <div>
-      <h1>HOME</h1>
-      {albumData.map((album) => (
-        <Link to={`/album/${album.id}`}>
-          <img src={album.albumThumbnail}></img>
-          <li key={album.id}>{album.name}</li>
-          {console.log(album.photos[0])}
-        </Link>
-      ))}
+      <h1 class="header">MY ALBUMS</h1>
+      <div className="container">
+        {albumData.map((album) => (
+          <Link to={`/album/${album.id}`}>
+            <div className="card">
+              <img src={album.albumThumbnail}></img>
+              <li key={album.id}>{album.name}</li>
+              {console.log(album.photos[0])}
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }

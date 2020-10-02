@@ -65,6 +65,28 @@
         }
       ],
       "id": 3
+    },
+    {
+      "albumThumbnail": "https://octodex.github.com/images/scottocat.jpg",
+      "name": "album 4",
+      "photos": [
+        {
+          "id": "1",
+          "name": "test4a",
+          "url": "https://octodex.github.com/images/gracehoppertocat.jpg"
+        },
+        {
+          "id": "2",
+          "name": "test4b",
+          "url": "https://octodex.github.com/images/gracehoppertocat.jpg"
+        },
+        {
+          "id": "3",
+          "name": "test4c",
+          "url": "https://octodex.github.com/images/gracehoppertocat.jpg"
+        }
+      ],
+      "id": 4
     }
   ]
 }

@@ -10,10 +10,11 @@ function AlbumView() {
 
   //find album per id then display all photos in html
   const [albumData, setAlbumData] = useState({ photos: [] })
-
+  const [masterData, setMaster] = useState([])
   useEffect(() => {
     axios.get(`http://localhost:3000/albums/`).then((r) => {
       const albumData = r.data
+      setMaster(r.data)
       console.log(albumData)
 
       albumData.forEach(function (album) {
@@ -27,14 +28,32 @@ function AlbumView() {
 
   return (
     <div>
-      <h1>ALBUM VIEW</h1>
-      {albumData.photos.map(function (photo) {
-        return (
-          <Link to={`/photo/${photo.id}`}>
-            <img src={photo.url}></img> <li>{photo.name}</li>
-          </Link>
-        )
-      })}
+      <div className="header">
+        <h1>{albumData.name}</h1>
+      </div>
+      <div className="wrapper">
+        <div className="container1">
+          {masterData.map((item) => {
+            return (
+              <Link to="/">
+                <li className="album-name-aside">{item.name}</li>
+              </Link>
+            )
+          })}
+        </div>
+        <div className="container3">
+          {albumData.photos.map(function (photo) {
+            return (
+              <div className="card">
+                <Link to={`/photo/${photo.id}`}>
+                  <img src={photo.url} key={photo.id}></img>{" "}
+                  <li>{photo.name}</li>
+                </Link>
+              </div>
+            )
+          })}
+        </div>
+      </div>
     </div>
   )
 }
