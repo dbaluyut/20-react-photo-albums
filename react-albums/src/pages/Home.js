@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "../App.css"
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import axios from "axios"
 function Home() {
   const [albumData, setAlbumData] = useState([])
@@ -13,8 +13,12 @@ function Home() {
   return (
     <div>
       <h1>HOME</h1>
-      {albumData.map((item) => (
-        <li key={item.id}>{item.name}</li>
+      {albumData.map((album) => (
+        <Link to={`/album/${album.id}`}>
+          <img src={album.albumThumbnail}></img>
+          <li key={album.id}>{album.name}</li>
+          {console.log(album.photos[0])}
+        </Link>
       ))}
     </div>
   )

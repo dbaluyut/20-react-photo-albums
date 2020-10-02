@@ -1,6 +1,7 @@
 {
   "albums": [
     {
+      "albumThumbnail": "https://octodex.github.com/images/scottocat.jpg",
       "name": "album 1",
       "id": 1,
       "photos": [
@@ -22,6 +23,7 @@
       ]
     },
     {
+      "albumThumbnail": "https://octodex.github.com/images/scottocat.jpg",
       "name": "album 2",
       "photos": [
         {
@@ -43,6 +45,7 @@
       "id": 2
     },
     {
+      "albumThumbnail": "https://octodex.github.com/images/scottocat.jpg",
       "name": "album 2",
       "photos": [
         {
