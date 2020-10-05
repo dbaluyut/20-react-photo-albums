@@ -15,9 +15,6 @@ function App() {
         <Route path="/album/:id">
           <AlbumView />
         </Route>
-        <Route path="/photo/:id">
-          <PhotoView />
-        </Route>
       </Switch>
     </Router>
   )

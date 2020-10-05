@@ -1,11 +1,6 @@
 import React, { useState, useEffect } from "react"
 import "../App.css"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  useParams,
-} from "react-router-dom"
+import { BrowserRouter as Router, Link, useParams } from "react-router-dom"
 
 import axios from "axios"
 function PhotoView() {
@@ -36,9 +31,13 @@ function PhotoView() {
       <h1 className="header">PHOTO VIEW</h1>
 
       <div className="container-photo-view">
-        <i class="fas fa-arrow-left arrow"></i>
+        <Link>
+          <i class="fas fa-arrow-left arrow"></i>
+        </Link>
         <img key={photoData.id} src={currentPhoto} className="img-large"></img>
-        <i class="fas fa-arrow-right arrow"></i>
+        <Link>
+          <i class="fas fa-arrow-right arrow"></i>
+        </Link>
       </div>
     </div>
   )

@@ -24,10 +24,24 @@ function AlbumView() {
         }
       })
     })
-  }, [])
+  }, [id])
 
+  const [activePhoto, setActivePhoto] = useState(null)
+  console.log(activePhoto)
   return (
     <div>
+      {activePhoto ? (
+        <div
+          className="modal"
+          onClick={() => {
+            console.log(activePhoto)
+            setActivePhoto(null)
+          }}
+        >
+          <img src={activePhoto.url}></img>
+          <li>{activePhoto.name}</li>
+        </div>
+      ) : null}
       <div className="header">
         <h1>{albumData.name}</h1>
       </div>
@@ -35,7 +49,7 @@ function AlbumView() {
         <div className="container1">
           {masterData.map((item) => {
             return (
-              <Link to="/album/">
+              <Link to={"/album/" + item.id}>
                 <li className="album-name-aside">{item.name}</li>
               </Link>
             )
@@ -44,11 +58,20 @@ function AlbumView() {
         <div className="container3">
           {albumData.photos.map(function (photo) {
             return (
-              <div className="card">
-                <Link to={`/photo/${photo.id}`}>
-                  <img src={photo.url} key={photo.id}></img>{" "}
+              <div
+                className="card"
+                // onClick={function showModal() {
+                //   document.getElementById(photo.id).style.display = "flex"
+                // }}
+                onClick={() => setActivePhoto(photo)}
+              >
+                <div>
+                  <img src={photo.url} key={photo.id}></img>
+                </div>
+
+                <div className="photo-name">
                   <li>{photo.name}</li>
-                </Link>
+                </div>
               </div>
             )
           })}
